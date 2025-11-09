@@ -1,0 +1,92 @@
+.DropDown {
+  width: 100%;
+  position: relative;
+}
+
+.DropdownSelectedItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0a0a0a;
+
+  &.DropDownDefault {
+    padding: 20px;
+    border: none;
+  }
+  &.DropDownDefaultActive {
+    background-color: #243c7b;
+    color: #fff;
+  }
+}
+
+.DropDownArrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s;
+
+  &.DropdownArrowReverse {
+    transform: rotate(180deg);
+  }
+  &.DwfaultDropdownArrowReverse {
+    path {
+      fill: white;
+    }
+  }
+}
+
+.DropDownOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+  margin-top: 4px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  color: #787486;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -1;
+}
+.leftImageActive {
+  filter: brightness(0) invert(1);
+}
+.DropDownOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .DropDownPublish {
+    color: #1db100;
+  }
+  .DropDownDraft {
+    color: #f57c11;
+  }
+
+  &--active {
+    color: #243c7b;
+  }
+  .DropDownDot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+
+    &.ActiveDot {
+      background-color: #1db100;
+    }
+    &.InactiveDot {
+      background-color: #d82c2c;
+    }
+    &.PublishDot {
+      background-color: #1db100;
+    }
+    &.DraftDot {
+      background-color: #f57c11;
+    }
+  }
+}
