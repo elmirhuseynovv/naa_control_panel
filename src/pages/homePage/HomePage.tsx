@@ -1,17 +1,18 @@
+import { useState } from "react";
 import IconPlus from "@/assets/plus.svg";
 import IconSearch from "@/assets/search.svg";
 import SideBar from "@/components/sideBar/SideBar";
 import { Dropdown } from "@/components/dropDown/DropDown";
 import Table from "@/components/table/Table";
-import { DropdownType } from "@/types/types";
+import If from "@/components/If";
+import CreateNewsModal from "@/components/createNewsModal/CreateNewsModal";
 import { usePosts } from "@/hooks/UsePosts";
+import { DropdownType } from "@/types/types";
 import "./HomePage.scss";
+
 const HomePage = () => {
   const { data } = usePosts();
-
-  const handleClick = () => {
-    console.log("Button clicked");
-  };
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="HomePage">
@@ -20,11 +21,13 @@ const HomePage = () => {
         <div className="HeaderSection">
           <div className="LeftSide">
             <p className="MainText">News & Announcements</p>
-            <p className="SubText">{data?.length} Posts</p>
+            <p className="SubText">
+              <If state={Boolean(data)}>{data?.length} Posts</If>
+            </p>
           </div>
 
           <div className="RightSide">
-            <button className="AddButton" onClick={handleClick}>
+            <button className="AddButton" onClick={() => setShowModal(true)}>
               <div className="IconBox">
                 <img src={IconPlus} alt="Add" className="AddIcon" />
               </div>
@@ -32,6 +35,7 @@ const HomePage = () => {
             </button>
           </div>
         </div>
+
         <div className="FilterBar">
           <Dropdown type={DropdownType.POSTS} className="FilterBarDropDown" />
           <Dropdown type={DropdownType.STATUS} className="FilterBarDropDown" />
@@ -41,8 +45,13 @@ const HomePage = () => {
             <input type="text" placeholder="Search" />
           </div>
         </div>
+
         <Table />
       </div>
+
+      <If state={showModal}>
+        <CreateNewsModal onClose={() => setShowModal(false)} />
+      </If>
     </div>
   );
 };

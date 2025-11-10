@@ -1,0 +1,352 @@
+.CreateNewsModal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(23, 23, 23, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+
+  .ModalContent {
+    width: 728px;
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .CloseButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    transition: 0.2s;
+    .IconClose {
+      width: 8px;
+      height: 8px;
+    }
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .ModalTop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+  }
+  .NewsAnnouncement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    .NewsAnnouncementHeading {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ModalTitle {
+      font-size: 28px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .StepIndicator {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .Lines {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 20px;
+    .Line {
+      width: 100%;
+      height: 4px;
+      border-radius: 6px;
+      background-color: #e0e7fa;
+    }
+    .Active {
+      background-color: #243c7b;
+    }
+  }
+
+  .LanguageSwitch {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    .LanguageButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e5e5;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: #fff;
+      color: #141414;
+      cursor: pointer;
+      transition: 0.2s;
+      gap: 6px;
+
+      .FlagIcon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+      }
+      &.Active {
+        border-color: #243c7b;
+      }
+    }
+  }
+
+  .FormGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+
+    .FormField {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .Label {
+        font-size: 14px;
+        color: #374151;
+        font-weight: 500;
+      }
+
+      .Input {
+        border: 1px solid #eeeeee;
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 14px;
+        outline: none;
+        box-shadow: 0px 0px 10.9px 0px #ebebeb40;
+
+        &:focus {
+          border-color: #1447e6;
+          box-shadow: 0 0 0 2px rgba(20, 71, 230, 0.2);
+        }
+      }
+
+      .TextArea {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px 12px;
+        min-height: 140px;
+        resize: none;
+        font-size: 15px;
+        color: #2a2a2a;
+
+        &:focus {
+          border-color: #1447e6;
+          box-shadow: 0 0 0 2px rgba(20, 71, 230, 0.2);
+        }
+      }
+    }
+  }
+
+  .CategorySwitch {
+    display: flex;
+    gap: 12px;
+
+    .CategoryButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: 500;
+      color: #1447e6;
+      transition: 0.2s;
+      background-color: #fff;
+      gap: 8px;
+
+      .Icons {
+        filter: brightness(0) saturate(100%) invert(18%) sepia(95%)
+          saturate(3812%) hue-rotate(219deg) brightness(95%) contrast(94%);
+      }
+      &.Active {
+        background: #1447e6;
+        border-color: #1447e6;
+        color: #fff;
+        .Icons {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+
+  .UploadBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 24px;
+    cursor: pointer;
+    color: #6a7282;
+    gap: 8px;
+    transition: 0.2s;
+
+    &:hover {
+      border-color: #1447e6;
+      color: #1447e6;
+    }
+
+    .UploadIcon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .HiddenInput {
+      display: none;
+    }
+  }
+
+  .CoverPreview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .CoverImage {
+      width: 160px;
+      height: 100px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .CoverInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      p {
+        font-size: 14px;
+        color: #6a7282;
+      }
+
+      button {
+        color: #d82c2c;
+        font-size: 14px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+
+    .NextButton {
+      width: 100%;
+      background: #243c7b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+  }
+}
+
+.BigUploadBox {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6a7282;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    border-color: #1447e6;
+    color: #1447e6;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  span {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .HiddenInput {
+    display: none;
+  }
+}
+
+.PreviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+
+  img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+}
+
+.DoubleButtons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .BackButton {
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+  }
+  .SubmitButton {
+    width: 100%;
+    background-color: #243c7b;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    border: none;
+    color: #fff;
+  }
+}

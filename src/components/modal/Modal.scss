@@ -1,0 +1,107 @@
+.ModalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(23, 23, 23, 0.6); // #17171799
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ModalContent {
+  position: relative;
+  background-color: white;
+  padding: 8px 24px 24px 24px;
+  border-radius: 12px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .CloseIcon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 11px;
+    height: 11px;
+    margin: 13px;
+    cursor: pointer;
+  }
+
+  .IconWrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 44px; // 36px close icon + 8px gap
+    margin-bottom: 24px;
+
+    .ModalIcon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .ModalTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2a2a2a;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .ModalMessage {
+    font-size: 14px; // sən 114px yazmısan, amma məncə typo, düzdürsə dəyişərik
+    font-weight: 400;
+    color: #6a7282;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ButtonArea {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+
+    &.success {
+      button {
+        width: 100%;
+        padding: 12px 28px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: #243c7b;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
+
+    &.delete {
+      button {
+        flex: 1;
+        padding: 12px 28px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .NoButton {
+        background-color: white;
+        border: 1px solid #e5e5e5;
+        color: #212121;
+      }
+
+      .YesButton {
+        color: white;
+        border: none;
+        background-color: #d82c2c;
+      }
+    }
+  }
+}

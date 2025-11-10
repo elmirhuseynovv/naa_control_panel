@@ -6,6 +6,7 @@ import IconTrash from "@/assets/trash.svg";
 import "./TableElement.scss";
 
 const TableElement: React.FC<TableElementProps> = ({
+  id,
   image,
   title,
   description,
@@ -14,6 +15,8 @@ const TableElement: React.FC<TableElementProps> = ({
   time,
   status,
   author,
+  onDelete,
+  onUpdate,
 }) => {
   const getContentTypeStyle = () => {
     return contentType === "News"
@@ -94,7 +97,7 @@ const TableElement: React.FC<TableElementProps> = ({
           <button
             type="button"
             className="ActionButton"
-            onClick={() => console.log("Edit:", title)}
+            onClick={() => onUpdate && onUpdate(id)}
             aria-label="Edit"
           >
             <img src={IconEdit} alt="" className="ActionIcon" />
@@ -102,7 +105,7 @@ const TableElement: React.FC<TableElementProps> = ({
           <button
             type="button"
             className="ActionButton"
-            onClick={() => console.log("Delete:", title)}
+            onClick={() => onDelete && onDelete(id)}
             aria-label="Delete"
           >
             <img src={IconTrash} alt="" className="ActionIcon" />

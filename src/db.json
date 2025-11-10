@@ -1,40 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Milli Aviasiya Akademiyası kitabı dərc olundu",
-      "description": "Milli Aviasiya Akademiyasının təşkilatçılığı ilə hazırlanmış kitab süni intellekt və pilotsuz sistemlər haqqında son araşdırmaları əhatə edir.",
-      "contentType": "News",
-      "date": "06/11/2026",
-      "time": "10:19 AM",
-      "status": "Active",
-      "author": "snovruzlu"
-    },
-    {
-      "id": 2,
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni tədris proqramı elan olundu",
-      "description": "Akademiya tərəfindən elan olunan yeni tədris proqramı texnologiya və mühəndislik sahələrində innovasiyaları əhatə edir.",
-      "contentType": "Announcement",
-      "date": "07/11/2026",
-      "time": "09:00 AM",
-      "status": "Inactive",
-      "author": "ehuseynov"
-    },
-    {
-      "id": 3,
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Akademiyada təcrübə proqramı başladı",
-      "description": "Yeni təcrübə proqramı tələbələrə real layihələrdə işləmək imkanı verir.",
-      "contentType": "Announcement",
-      "date": "10/11/2026",
-      "time": "02:15 PM",
-      "status": "Active",
-      "author": "ehuseynov"
-    },
-    {
-      "id": 4,
+      "id": "4",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Aviasiya sərgisi keçiriləcək",
       "description": "Gələn ay Bakıda beynəlxalq aviasiya sərgisi keçiriləcək.",
@@ -45,7 +12,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 5,
+      "id": "5",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni laboratoriya istifadəyə verildi",
       "description": "Mühəndislik fakültəsində yeni texnoloji laboratoriya açıldı.",
@@ -56,7 +23,7 @@
       "author": "ehuseynov"
     },
     {
-      "id": 6,
+      "id": "6",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Tələbə startapı mükafat qazandı",
       "description": "Akademiya tələbələrinin qurduğu startap beynəlxalq müsabiqədə qalib gəldi.",
@@ -67,18 +34,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 7,
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni dərs modulu istifadəyə verildi",
-      "description": "Yeni platforma dərslərin interaktiv formada keçirilməsinə imkan verir.",
-      "contentType": "Update",
-      "date": "17/11/2026",
-      "time": "10:00 AM",
-      "status": "Active",
-      "author": "ehuseynov"
-    },
-    {
-      "id": 8,
+      "id": "8",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Tələbələr üçün təqaüd proqramı elan edildi",
       "description": "Yeni təqaüd proqramı akademiyanın ən aktiv tələbələrinə şamil olunacaq.",
@@ -89,7 +45,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 9,
+      "id": "9",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni dron layihəsi təqdim olundu",
       "description": "Akademiyanın tədqiqat qrupu yeni pilotsuz uçuş aparatını təqdim etdi.",
@@ -100,7 +56,7 @@
       "author": "ehuseynov"
     },
     {
-      "id": 10,
+      "id": "10",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni elmi jurnal nəşr olundu",
       "description": "Akademiyanın elmi heyəti tərəfindən hazırlanan jurnal beynəlxalq bazada yayımlandı.",
@@ -111,7 +67,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 11,
+      "id": "11",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni təlim kursu başladı",
       "description": "Kurs süni intellekt və maşın öyrənməsi üzrə bilikləri artırmağa yönəlib.",
@@ -122,7 +78,7 @@
       "author": "ehuseynov"
     },
     {
-      "id": 12,
+      "id": "12",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Akademiyada dron yarışları keçiriləcək",
       "description": "Yarışda tələbələr öz dizayn etdikləri dronlarla iştirak edəcəklər.",
@@ -133,7 +89,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 13,
+      "id": "13",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni tədris ili üçün qeydiyyat başladı",
       "description": "Akademiyada 2027-ci il üçün tələbə qəbul prosesi artıq aktivdir.",
@@ -144,7 +100,7 @@
       "author": "ehuseynov"
     },
     {
-      "id": 14,
+      "id": "14",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Akademiya beynəlxalq konfransda təmsil olundu",
       "description": "Akademiyanın nümayəndələri beynəlxalq elmi konfransda çıxış ediblər.",
@@ -155,7 +111,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 15,
+      "id": "15",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Tələbələr üçün seminar təşkil olundu",
       "description": "Seminar elm və texnologiyanın gələcəyi mövzusunda keçirildi.",
@@ -166,7 +122,7 @@
       "author": "ehuseynov"
     },
     {
-      "id": 16,
+      "id": "16",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Tələbələr üçün yeni kitabxana bölməsi açıldı",
       "description": "Yeni bölmə yalnız texnoloji mövzulara həsr olunub.",
@@ -177,7 +133,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 17,
+      "id": "17",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Akademiyada kodlaşdırma marafonu keçiriləcək",
       "description": "Marafonda 100-dən çox tələbə iştirak edəcək.",
@@ -188,7 +144,7 @@
       "author": "ehuseynov"
     },
     {
-      "id": 18,
+      "id": "18",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni müəllim heyəti ilə tanışlıq",
       "description": "Yeni dərs ili üçün akademiyanın müəllim heyəti təqdim olundu.",
@@ -199,7 +155,7 @@
       "author": "snovruzlu"
     },
     {
-      "id": 19,
+      "id": "19",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni startap mərkəzi istifadəyə verildi",
       "description": "Mərkəz innovativ layihələr üçün tələbələrə imkanlar yaradacaq.",
@@ -210,7 +166,7 @@
       "author": "ehuseynov"
     },
     {
-      "id": 20,
+      "id": "20",
       "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
       "title": "Yeni layihə: Pilotsuz uçuş məktəbi",
       "description": "Akademiya tələbələri üçün dron idarəetmə kursları başlayır.",

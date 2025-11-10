@@ -35,4 +35,6 @@ export interface TableElementProps {
   time: string;
   status: string;
   author: string;
+  onDelete?: (id: number) => void;
+  onUpdate?: (id: number) => void;
 }
