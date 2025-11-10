@@ -6,12 +6,20 @@
   flex-direction: column;
 
   .SidebarLogoContainer {
-    width: 100%;
+    width: 318px;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid #f7f7f7;
-    padding: 19px 24px 19px 32px;
+    padding: 24px 19px 32px 19px;
+    gap: 6px;
+  }
+  .ControlPanel {
+    font-size: 18px;
+    font-weight: 500;
   }
 
   .SidebarDropDownsContainer {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

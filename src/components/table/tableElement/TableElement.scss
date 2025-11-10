@@ -1,0 +1,98 @@
+.TableElement {
+  .ElementPost {
+    text-align: start;
+    .ElementImageText {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .ElementImage {
+        width: 128px;
+        height: 96px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .ElementTextGroup {
+        display: grid;
+        width: 166px;
+        height: 96px;
+        overflow: hidden;
+        gap: 6px;
+
+        .ElementTitle {
+          font-size: 16px;
+          font-weight: 600;
+          color: #000;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .ElementDescription {
+          font-size: 14px;
+          color: #6a7282;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+.ElementTypeContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ElementType {
+  width: min-content;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+.ElementDate {
+  .DateText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+  }
+  .TimeText {
+    font-size: 12px;
+    color: #aaaaaa;
+  }
+}
+.ElementStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ElementStatusContainer {
+    width: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 12px;
+    border-radius: 6px;
+  }
+  .StatusDot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+.ElementActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  .ActionButton {
+    background: none;
+    border: none;
+    outline: none;
+  }
+}

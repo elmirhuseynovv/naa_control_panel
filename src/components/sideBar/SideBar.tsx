@@ -1,6 +1,6 @@
 import { DropdownType } from "@/types/types";
 import { Dropdown } from "@/components/dropDown/DropDown";
-import IconLogo from "@/assets/logo.png";
+import IconLogo from "@/assets/logo.svg";
 import IconHome from "@/assets/home.svg";
 import IconProfile from "@/assets/profile.png";
 import IconSettings from "@/assets/setting.svg";
@@ -14,6 +14,7 @@ const SideBar = () => {
     <div className="Sidebar">
       <div className="SidebarLogoContainer">
         <img src={IconLogo} alt="" />
+        <p className="ControlPanel">NAA Control Panel</p>
       </div>
       <div className="SidebarDropDownsContainer">
         <Dropdown

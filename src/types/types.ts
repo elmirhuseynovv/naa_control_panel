@@ -24,3 +24,14 @@ export interface IfProps {
   state: boolean;
   children: ReactNode;
 }
+
+export interface TableElementProps {
+  image: string;
+  title: string;
+  description: string;
+  contentType: string;
+  date: string;
+  time: string;
+  status: string;
+  author: string;
+}

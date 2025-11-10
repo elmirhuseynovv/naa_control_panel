@@ -158,7 +158,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         </If>
 
         <If state={type === "DEFAULT"}>
-          <div className="DropDownOptions">
+          <div className="DropDownOptions DropDownDefault">
             {options.map((opt) => (
               <div
                 key={opt.value}
