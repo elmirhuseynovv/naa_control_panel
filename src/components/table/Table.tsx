@@ -1,8 +1,7 @@
-// Table.tsx
-import React from "react";
+import { useState } from "react";
+import { usePosts } from "@/hooks/UsePosts";
 import TableElement from "./tableElement/TableElement";
-import IconIMage from "@/assets/img.png";
-import type { TableElementProps } from "@/types/types";
+import Pagination from "@/components/pagination/Pagination";
 import "./Table.scss";
 
 const Table = () => {
@@ -15,49 +14,34 @@ const Table = () => {
     "Author",
     "Actions",
   ];
-
-  const data: TableElementProps[] = [
-    {
-      image: IconIMage,
-      title:
-        "Milli Aviasiya Akademiyası kitabı Milli Aviasiya Akademiyası kitabı",
-      description:
-        "Kitab haqqında uzun description Milli Aviasiya Akademiyası kitabı Milli Aviasiya Akademiyası kitabı Milli Aviasiya Akademiyası kitabı",
-      contentType: "Announcement",
-      date: "06/11/2026",
-      time: "10:19 AM",
-      status: "Active",
-      author: "snovruzlu",
-    },
-    {
-      image: IconIMage,
-      title:
-        "Milli Aviasiya Akademiyası kitabı Milli Aviasiya Akademiyası kitabı",
-      description:
-        "Kitab haqqında uzun description Milli Aviasiya Akademiyası kitabı Milli Aviasiya Akademiyası kitabı Milli Aviasiya Akademiyası kitabı",
-      contentType: "News",
-      date: "06/11/2026",
-      time: "10:19 AM",
-      status: "Inactive",
-      author: "snovruzlu",
-    },
-  ];
-
+  const { data } = usePosts();
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+  const startIdx = (currentPage - 1) * itemsPerPage;
+  const paginatedData = data?.slice(startIdx, startIdx + itemsPerPage) ?? [];
   return (
-    <table className="Table">
-      <thead>
-        <tr>
-          {headers.map((header, idx) => (
-            <th key={idx}>{header}</th>
+    <>
+      <table className="Table">
+        <thead>
+          <tr>
+            {headers.map((header, idx) => (
+              <th key={idx}>{header}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {paginatedData?.map((item, idx) => (
+            <TableElement key={idx} {...item} />
           ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, idx) => (
-          <TableElement key={idx} {...item} />
-        ))}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+      <Pagination
+        totalItems={data?.length ?? 0}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
+    </>
   );
 };
 

@@ -1,14 +1,18 @@
-import SideBar from "@/components/sideBar/SideBar";
 import IconPlus from "@/assets/plus.svg";
 import IconSearch from "@/assets/search.svg";
-import "./HomePage.scss";
+import SideBar from "@/components/sideBar/SideBar";
 import { Dropdown } from "@/components/dropDown/DropDown";
-import { DropdownType } from "@/types/types";
 import Table from "@/components/table/Table";
+import { DropdownType } from "@/types/types";
+import { usePosts } from "@/hooks/UsePosts";
+import "./HomePage.scss";
 const HomePage = () => {
+  const { data } = usePosts();
+
   const handleClick = () => {
     console.log("Button clicked");
   };
+
   return (
     <div className="HomePage">
       <SideBar />
@@ -16,7 +20,7 @@ const HomePage = () => {
         <div className="HeaderSection">
           <div className="LeftSide">
             <p className="MainText">News & Announcements</p>
-            <p className="SubText">210 posts</p>
+            <p className="SubText">{data?.length} Posts</p>
           </div>
 
           <div className="RightSide">

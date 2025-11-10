@@ -2,11 +2,21 @@
   display: flex;
 }
 .TableContainer {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 24px;
   gap: 24px;
+
+  overflow: scroll;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.TableContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .HeaderSection {

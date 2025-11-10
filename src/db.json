@@ -1,0 +1,224 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Milli Aviasiya Akademiyası kitabı dərc olundu",
+      "description": "Milli Aviasiya Akademiyasının təşkilatçılığı ilə hazırlanmış kitab süni intellekt və pilotsuz sistemlər haqqında son araşdırmaları əhatə edir.",
+      "contentType": "News",
+      "date": "06/11/2026",
+      "time": "10:19 AM",
+      "status": "Active",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 2,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni tədris proqramı elan olundu",
+      "description": "Akademiya tərəfindən elan olunan yeni tədris proqramı texnologiya və mühəndislik sahələrində innovasiyaları əhatə edir.",
+      "contentType": "Announcement",
+      "date": "07/11/2026",
+      "time": "09:00 AM",
+      "status": "Inactive",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 3,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Akademiyada təcrübə proqramı başladı",
+      "description": "Yeni təcrübə proqramı tələbələrə real layihələrdə işləmək imkanı verir.",
+      "contentType": "Announcement",
+      "date": "10/11/2026",
+      "time": "02:15 PM",
+      "status": "Active",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 4,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Aviasiya sərgisi keçiriləcək",
+      "description": "Gələn ay Bakıda beynəlxalq aviasiya sərgisi keçiriləcək.",
+      "contentType": "News",
+      "date": "12/11/2026",
+      "time": "11:00 AM",
+      "status": "Scheduled",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 5,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni laboratoriya istifadəyə verildi",
+      "description": "Mühəndislik fakültəsində yeni texnoloji laboratoriya açıldı.",
+      "contentType": "News",
+      "date": "13/11/2026",
+      "time": "08:45 AM",
+      "status": "Active",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 6,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Tələbə startapı mükafat qazandı",
+      "description": "Akademiya tələbələrinin qurduğu startap beynəlxalq müsabiqədə qalib gəldi.",
+      "contentType": "News",
+      "date": "15/11/2026",
+      "time": "05:30 PM",
+      "status": "Active",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 7,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni dərs modulu istifadəyə verildi",
+      "description": "Yeni platforma dərslərin interaktiv formada keçirilməsinə imkan verir.",
+      "contentType": "Update",
+      "date": "17/11/2026",
+      "time": "10:00 AM",
+      "status": "Active",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 8,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Tələbələr üçün təqaüd proqramı elan edildi",
+      "description": "Yeni təqaüd proqramı akademiyanın ən aktiv tələbələrinə şamil olunacaq.",
+      "contentType": "Announcement",
+      "date": "18/11/2026",
+      "time": "04:30 PM",
+      "status": "Active",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 9,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni dron layihəsi təqdim olundu",
+      "description": "Akademiyanın tədqiqat qrupu yeni pilotsuz uçuş aparatını təqdim etdi.",
+      "contentType": "News",
+      "date": "20/11/2026",
+      "time": "09:45 AM",
+      "status": "Active",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 10,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni elmi jurnal nəşr olundu",
+      "description": "Akademiyanın elmi heyəti tərəfindən hazırlanan jurnal beynəlxalq bazada yayımlandı.",
+      "contentType": "News",
+      "date": "21/11/2026",
+      "time": "01:20 PM",
+      "status": "Active",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 11,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni təlim kursu başladı",
+      "description": "Kurs süni intellekt və maşın öyrənməsi üzrə bilikləri artırmağa yönəlib.",
+      "contentType": "Announcement",
+      "date": "22/11/2026",
+      "time": "03:15 PM",
+      "status": "Scheduled",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 12,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Akademiyada dron yarışları keçiriləcək",
+      "description": "Yarışda tələbələr öz dizayn etdikləri dronlarla iştirak edəcəklər.",
+      "contentType": "Event",
+      "date": "23/11/2026",
+      "time": "10:30 AM",
+      "status": "Planned",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 13,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni tədris ili üçün qeydiyyat başladı",
+      "description": "Akademiyada 2027-ci il üçün tələbə qəbul prosesi artıq aktivdir.",
+      "contentType": "Announcement",
+      "date": "25/11/2026",
+      "time": "09:00 AM",
+      "status": "Active",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 14,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Akademiya beynəlxalq konfransda təmsil olundu",
+      "description": "Akademiyanın nümayəndələri beynəlxalq elmi konfransda çıxış ediblər.",
+      "contentType": "News",
+      "date": "26/11/2026",
+      "time": "11:50 AM",
+      "status": "Active",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 15,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Tələbələr üçün seminar təşkil olundu",
+      "description": "Seminar elm və texnologiyanın gələcəyi mövzusunda keçirildi.",
+      "contentType": "Event",
+      "date": "28/11/2026",
+      "time": "02:00 PM",
+      "status": "Completed",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 16,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Tələbələr üçün yeni kitabxana bölməsi açıldı",
+      "description": "Yeni bölmə yalnız texnoloji mövzulara həsr olunub.",
+      "contentType": "News",
+      "date": "30/11/2026",
+      "time": "10:10 AM",
+      "status": "Active",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 17,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Akademiyada kodlaşdırma marafonu keçiriləcək",
+      "description": "Marafonda 100-dən çox tələbə iştirak edəcək.",
+      "contentType": "Event",
+      "date": "01/12/2026",
+      "time": "08:00 AM",
+      "status": "Planned",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 18,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni müəllim heyəti ilə tanışlıq",
+      "description": "Yeni dərs ili üçün akademiyanın müəllim heyəti təqdim olundu.",
+      "contentType": "Announcement",
+      "date": "02/12/2026",
+      "time": "01:40 PM",
+      "status": "Active",
+      "author": "snovruzlu"
+    },
+    {
+      "id": 19,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni startap mərkəzi istifadəyə verildi",
+      "description": "Mərkəz innovativ layihələr üçün tələbələrə imkanlar yaradacaq.",
+      "contentType": "News",
+      "date": "04/12/2026",
+      "time": "10:25 AM",
+      "status": "Active",
+      "author": "ehuseynov"
+    },
+    {
+      "id": 20,
+      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
+      "title": "Yeni layihə: Pilotsuz uçuş məktəbi",
+      "description": "Akademiya tələbələri üçün dron idarəetmə kursları başlayır.",
+      "contentType": "Announcement",
+      "date": "06/12/2026",
+      "time": "03:55 PM",
+      "status": "Scheduled",
+      "author": "ehuseynov"
+    }
+  ]
+}

@@ -26,6 +26,7 @@ export interface IfProps {
 }
 
 export interface TableElementProps {
+  id: number;
   image: string;
   title: string;
   description: string;

@@ -26,8 +26,13 @@
     gap: 4px;
     padding: 32px 19px;
     overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
+  .SidebarDropDownsContainer::-webkit-scrollbar {
+    display: none;
+  }
   .SidebarUserAreaContainer {
     display: flex;
     flex-direction: column;
