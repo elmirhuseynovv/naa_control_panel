@@ -4,15 +4,15 @@ import TableElement from "@/components/table/tableElement/TableElement";
 import Pagination from "@/components/pagination/Pagination";
 import Modal from "@/components/modal/Modal";
 import If from "@/components/If";
-import CreateNewsModal from "@/components/createNewsModal/CreateNewsModal";
 import type { TableElementProps } from "@/types/types";
 import "./Table.scss";
 
 interface TableProps {
   data?: TableElementProps[];
+  onEdit?: (post: TableElementProps) => void; 
 }
 
-const Table: React.FC<TableProps> = ({ data }) => {
+const Table: React.FC<TableProps> = ({ data, onEdit }) => {
   const headers = [
     "Posts",
     "Type",
@@ -28,15 +28,12 @@ const Table: React.FC<TableProps> = ({ data }) => {
   const itemsPerPage = 6;
 
   const effectiveData = data && data.length > 0 ? data : fetchedData ?? [];
-
   const startIdx = (currentPage - 1) * itemsPerPage;
   const paginatedData = effectiveData.slice(startIdx, startIdx + itemsPerPage);
 
   const [selectedDeleteId, setSelectedDeleteId] = useState<string | null>(null);
-  const [selectedPost, setSelectedPost] = useState<TableElementProps | null>(
-    null
-  );
-  const [mode, setMode] = useState<"create" | "edit" | "none">("none");
+
+  
 
   return (
     <>
@@ -54,14 +51,8 @@ const Table: React.FC<TableProps> = ({ data }) => {
               <TableElement
                 key={idx}
                 {...item}
-                onDelete={(id) => {
-                  setSelectedDeleteId(id);
-                  setMode("none");
-                }}
-                onEdit={(post) => {
-                  setSelectedPost(post);
-                  setMode("edit");
-                }}
+                onDelete={(id) => setSelectedDeleteId(id)}
+                onEdit={(post) => onEdit?.(post)} 
               />
             ))
           ) : (
@@ -94,17 +85,6 @@ const Table: React.FC<TableProps> = ({ data }) => {
               deletePost.mutate(selectedDeleteId);
               setSelectedDeleteId(null);
             }
-          }}
-        />
-      </If>
-
-      <If state={mode === "edit" && Boolean(selectedPost)}>
-        <CreateNewsModal
-          mode="edit"
-          post={selectedPost!}
-          onClose={() => {
-            setMode("none");
-            setSelectedPost(null);
           }}
         />
       </If>

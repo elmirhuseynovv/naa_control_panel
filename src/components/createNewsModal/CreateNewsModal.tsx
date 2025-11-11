@@ -1,41 +1,64 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import clsx from "clsx";
-import If from "@/components/If";
-
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import type { TableElementProps } from "@/types/types";
 import { usePosts } from "@/hooks/UsePosts";
-
+import type { TableElementProps } from "@/types/types";
 import IconClose from "@/assets/close.svg";
 import IconGallery from "@/assets/gallery.svg";
 import IconNews from "@/assets/news.svg";
 import IconAnnoucement from "@/assets/announcement.svg";
 import "./CreateNewsModal.scss";
+import clsx from "clsx";
+import If from "../If";
 
-const postSchema = z.object({
-  title: z.string().min(5, "Title must be at least 5 characters long"),
-  description: z
-    .string()
-    .min(10, "Description must be at least 10 characters long"),
-  author: z.string().min(2, "Author name is required"),
-  contentType: z.enum(["News", "Announcement"]),
-});
+const postSchema = z
+  .object({
+    title: z
+      .string()
+      .trim()
+      .min(5, "Title must be at least 5 characters long")
+      .refine((val) => val.trim().length > 0, {
+        message: "Title cannot be empty or just spaces",
+      }),
+    description: z
+      .string()
+      .trim()
+      .min(10, "Description must be at least 10 characters long")
+      .refine((val) => val.trim().length > 0, {
+        message: "Description cannot be empty or just spaces",
+      }),
+    author: z
+      .string()
+      .trim()
+      .min(2, "Author name is required")
+      .refine((val) => val.trim().length > 0, {
+        message: "Author cannot be empty or just spaces",
+      }),
+    contentType: z.enum(["News", "Announcement"]),
+    cover: z.string().nullable(),
+  })
+  .refine((data) => data.cover !== null, {
+    message: "Cover image is required",
+    path: ["cover"],
+  });
 
 type PostFormData = z.infer<typeof postSchema>;
 
 interface CreateNewsModalProps {
   onClose: () => void;
+  onSuccess?: () => void;
   mode?: "create" | "edit";
   post?: TableElementProps | null;
 }
 
 const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
   onClose,
+  onSuccess,
   mode = "create",
   post = null,
 }) => {
+  const { addPost, updatePost } = usePosts();
   const [step, setStep] = useState<1 | 2>(1);
   const [cover, setCover] = useState<string | null>(post?.image ?? null);
   const [category, setCategory] = useState<"News" | "Announcement">(
@@ -43,14 +66,13 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
   );
   const [extraImages, setExtraImages] = useState<string[]>([]);
   const [language, setLanguage] = useState<"AZ" | "EN">("AZ");
-  const [imageError, setImageError] = useState<string>("");
-  const { addPost, updatePost } = usePosts();
 
   const {
     register,
     handleSubmit,
     trigger,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<PostFormData>({
     resolver: zodResolver(postSchema),
@@ -60,6 +82,7 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
       description: post?.description ?? "",
       contentType: (post?.contentType as "News" | "Announcement") ?? "News",
       author: post?.author ?? "ehuseynov",
+      cover: post?.image ?? null,
     },
   });
 
@@ -70,8 +93,9 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
         description: post.description,
         author: post.author,
         contentType: post.contentType as "News" | "Announcement",
+        cover: post.image ?? null,
       });
-      setCover(post.image);
+      setCover(post.image ?? null);
       setCategory(post.contentType as "News" | "Announcement");
     }
   }, [mode, post, reset]);
@@ -83,15 +107,17 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
   };
 
   const onSubmit = (formData: PostFormData) => {
-    if (!cover) {
-      setImageError("Please upload a cover image");
-      return;
-    }
+    const cleanedData = {
+      ...formData,
+      title: formData.title.trim(),
+      description: formData.description.trim(),
+      author: formData.author.trim(),
+    };
 
     const postData: TableElementProps = {
-      ...formData,
+      ...cleanedData,
       id: post?.id ?? Date.now().toString(),
-      image: cover,
+      image: cover!,
       contentType: category,
       date: post?.date ?? new Date().toLocaleDateString(),
       time:
@@ -101,24 +127,22 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
           minute: "2-digit",
         }),
       status: post?.status ?? "Active",
-      author: formData.author || "ehuseynov",
+      author: cleanedData.author || "ehuseynov",
     };
 
-    mode === "edit" ? updatePost.mutate(postData) : addPost.mutate(postData);
-    onClose();
-    reset();
+    const handleSuccess = () => {
+      reset();
+      onClose();
+      if (onSuccess) onSuccess();
+    };
+
+    if (mode === "edit")
+      updatePost.mutate(postData, { onSuccess: handleSuccess });
+    else addPost.mutate(postData, { onSuccess: handleSuccess });
   };
 
   const handleNext = async () => {
-    const isValid = await trigger(["title", "description"]);
-
-    if (!cover) {
-      setImageError("Please upload a cover image");
-      return;
-    } else {
-      setImageError("");
-    }
-
+    const isValid = await trigger(["title", "description", "cover"]);
     if (isValid) setStep(2);
   };
 
@@ -219,6 +243,7 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
                   ))}
                 </div>
               </div>
+
               <div className="FormField">
                 <label className="Label">Cover Image</label>
                 {!cover ? (
@@ -230,8 +255,9 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
                       className="HiddenInput"
                       onChange={(e) => {
                         if (e.target.files?.[0]) {
-                          setCover(URL.createObjectURL(e.target.files[0]));
-                          setImageError("");
+                          const url = URL.createObjectURL(e.target.files[0]);
+                          setCover(url);
+                          setValue("cover", url);
                         }
                       }}
                     />
@@ -241,14 +267,21 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
                     <img src={cover} alt="cover" className="CoverImage" />
                     <div className="CoverInfo">
                       <p>Photo name</p>
-                      <button type="button" onClick={() => setCover(null)}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setCover(null);
+                          setValue("cover", null);
+                        }}
+                      >
                         Remove
                       </button>
                     </div>
                   </div>
                 )}
-
-                {imageError && <p className="Error">{imageError}</p>}
+                {errors.cover && (
+                  <p className="Error">{errors.cover.message}</p>
+                )}
               </div>
             </div>
           </If>
