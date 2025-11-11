@@ -7,7 +7,7 @@ export const usePosts = () => {
   const postsQuery = useQuery<TableElementProps[]>({
     queryKey: ["posts"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:3000/posts");
+      const res = await fetch("https://naa-api-2.onrender.com/posts");
       if (!res.ok) throw new Error("Network error");
       return res.json();
     },
@@ -15,7 +15,7 @@ export const usePosts = () => {
 
   const deletePost = useMutation({
     mutationFn: async (id: string) => {
-      const res = await fetch(`http://localhost:3000/posts/${id}`, {
+      const res = await fetch(`https://naa-api-2.onrender.com/posts/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete");
@@ -28,7 +28,7 @@ export const usePosts = () => {
 
   const addPost = useMutation({
     mutationFn: async (newPost: TableElementProps) => {
-      const res = await fetch("http://localhost:3000/posts", {
+      const res = await fetch("https://naa-api-2.onrender.com/posts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPost),
@@ -43,11 +43,14 @@ export const usePosts = () => {
 
   const updatePost = useMutation({
     mutationFn: async (updatedPost: TableElementProps) => {
-      const res = await fetch(`http://localhost:3000/posts/${updatedPost.id}`, {
-        method: "PUT", 
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedPost),
-      });
+      const res = await fetch(
+        `https://naa-api-2.onrender.com/posts/${updatedPost.id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(updatedPost),
+        }
+      );
       if (!res.ok) throw new Error("Failed to update post");
       return res.json();
     },
