@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import type { DropdownProps } from "@/types/types";
 import clsx from "clsx";
-import IconArrow from "@/assets/IconArrow.svg?react";
 import If from "@/components/If";
+
+import type { DropdownProps } from "@/types/types";
+
+import IconArrow from "@/assets/IconArrow.svg?react";
 import "./DropDown.scss";
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -11,6 +13,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   leftImage,
   className,
   placeholder,
+  onSelect,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<string>("");
@@ -32,9 +35,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   const handleSelect = (option: string) => {
     setSelected(option);
-    if (type !== "DEFAULT") {
-      setIsOpen(false);
-    }
+    onSelect?.(option);
+    if (type !== "DEFAULT") setIsOpen(false);
   };
 
   return (
@@ -72,12 +74,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
                 })}
               ></div>
             </If>
-            <If state={type === "DEFAULT"}>
-              <p>{displayPlaceholder}</p>
-            </If>
-            <If state={type !== "DEFAULT"}>
-              <p>{selected || displayPlaceholder}</p>
-            </If>
+
+            <p>{selected || displayPlaceholder}</p>
           </div>
         </div>
 
@@ -92,68 +90,57 @@ export const Dropdown: React.FC<DropdownProps> = ({
       <If state={isOpen}>
         <If state={type === "STATUS"}>
           <div className="DropDownOptions">
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("All Status")}
-            >
-              <p>All Status</p>
-            </div>
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("Active")}
-            >
-              <div className="DropDownDot ActiveDot"></div>
-              <p>Active</p>
-            </div>
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("Inactive")}
-            >
-              <div className="DropDownDot InactiveDot"></div>
-              <p>Inactive</p>
-            </div>
+            {["All Status", "Active", "Inactive"].map((status) => (
+              <div
+                key={status}
+                className="DropDownOption"
+                onClick={() => handleSelect(status)}
+              >
+                {status !== "All Status" && (
+                  <div
+                    className={clsx("DropDownDot", {
+                      ActiveDot: status === "Active",
+                      InactiveDot: status === "Inactive",
+                    })}
+                  ></div>
+                )}
+                <p>{status}</p>
+              </div>
+            ))}
           </div>
         </If>
 
         <If state={type === "PUBLISH"}>
           <div className="DropDownOptions">
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("Publish")}
-            >
-              <div className="DropDownDot PublishDot"></div>
-              <p className="DropDownPublish">Publish</p>
-            </div>
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("Draft")}
-            >
-              <div className="DropDownDot DraftDot"></div>
-              <p className="DropDownDraft">Draft</p>
-            </div>
+            {["Publish", "Draft"].map((status) => (
+              <div
+                key={status}
+                className="DropDownOption"
+                onClick={() => handleSelect(status)}
+              >
+                <div
+                  className={clsx("DropDownDot", {
+                    PublishDot: status === "Publish",
+                    DraftDot: status === "Draft",
+                  })}
+                ></div>
+                <p>{status}</p>
+              </div>
+            ))}
           </div>
         </If>
 
         <If state={type === "POSTS"}>
           <div className="DropDownOptions">
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("All Posts")}
-            >
-              <p>All Posts</p>
-            </div>
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("News")}
-            >
-              <p>News</p>
-            </div>
-            <div
-              className="DropDownOption"
-              onClick={() => handleSelect("Announcements")}
-            >
-              <p>Announcements</p>
-            </div>
+            {["All Posts", "News", "Announcement"].map((postType) => (
+              <div
+                key={postType}
+                className="DropDownOption"
+                onClick={() => handleSelect(postType)}
+              >
+                <p>{postType}</p>
+              </div>
+            ))}
           </div>
         </If>
 

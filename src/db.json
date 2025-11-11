@@ -31,7 +31,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/az/thumb/e/ed/MAA.jpeg/600px-MAA.jpeg",
       "date": "22/11/2026",
       "time": "03:15 PM",
-      "status": "Scheduled"
+      "status": "Inactive"
     },
     {
       "title": "Azerbaijan Airlines - AZAL | Flight Ticket Booking - Airline Tickets",
@@ -42,7 +42,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-zDGIu1rT-jyrcUzc2kkgejMpJmlwE9mYA&s",
       "date": "22/11/2026",
       "time": "03:15 PM",
-      "status": "Scheduled"
+      "status": "Inactive"
     },
     {
       "title": "Azal & Maldivian",
@@ -53,7 +53,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAE9R-kZ05XptchdagtpVMUpkDGhUobzfavg&s",
       "date": "22/11/2026",
       "time": "03:15 PM",
-      "status": "Scheduled"
+      "status": "Inactive"
     },
     {
       "title": "AZAL Successfully Completes First Quarter of 2025 with Strong Operational Performance",
@@ -64,7 +64,18 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8TN2GJR4IbaAgJcEHVZaA7Rf7gehvRNobg&s",
       "date": "22/11/2026",
       "time": "03:15 PM",
-      "status": "Scheduled"
+      "status": "Inactive"
+    },
+    {
+      "title": "AZAL Successfully Completes First Quarter of 2025 with Strong Operational Performance",
+      "description": "In the first quarter of this year, 3,718 flights were operated across 48",
+      "author": "ehuseynov",
+      "contentType": "Announcement",
+      "id": "453463442355",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8TN2GJR4IbaAgJcEHVZaA7Rf7gehvRNobg&s",
+      "date": "22/11/2026",
+      "time": "03:15 PM",
+      "status": "Active"
     }
   ]
 }

@@ -1,7 +1,7 @@
 .ModalOverlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(23, 23, 23, 0.6); // #17171799
+  background-color: rgba(23, 23, 23, 0.6);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 44px; // 36px close icon + 8px gap
+    margin-top: 44px;
     margin-bottom: 24px;
 
     .ModalIcon {
@@ -54,7 +54,7 @@
   }
 
   .ModalMessage {
-    font-size: 14px; // sən 114px yazmısan, amma məncə typo, düzdürsə dəyişərik
+    font-size: 14px; 
     font-weight: 400;
     color: #6a7282;
     text-align: center;

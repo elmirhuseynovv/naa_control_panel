@@ -1,6 +1,6 @@
 import React from "react";
-import { DropdownType, type TableElementProps } from "@/types/types";
 import { Dropdown } from "@/components/dropDown/DropDown";
+import { DropdownType, type TableElementProps } from "@/types/types";
 import IconEdit from "@/assets/edit.svg";
 import IconTrash from "@/assets/trash.svg";
 import "./TableElement.scss";

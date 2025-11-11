@@ -18,7 +18,10 @@ export type DropdownProps = {
   leftImage?: string;
   className?: string;
   placeholder?: string;
+  onSelect?: (value: string) => void;
 };
+
+
 
 export interface IfProps {
   state: boolean;

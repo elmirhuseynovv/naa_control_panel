@@ -1,14 +1,18 @@
 import { useState } from "react";
 import { usePosts } from "@/hooks/UsePosts";
-import TableElement from "./tableElement/TableElement";
+import TableElement from "@/components/table/tableElement/TableElement";
 import Pagination from "@/components/pagination/Pagination";
-import "./Table.scss";
-import Modal from "../modal/Modal";
-import If from "../If";
+import Modal from "@/components/modal/Modal";
+import If from "@/components/If";
 import CreateNewsModal from "@/components/createNewsModal/CreateNewsModal";
 import type { TableElementProps } from "@/types/types";
+import "./Table.scss";
 
-const Table = () => {
+interface TableProps {
+  data?: TableElementProps[];
+}
+
+const Table: React.FC<TableProps> = ({ data }) => {
   const headers = [
     "Posts",
     "Type",
@@ -19,16 +23,21 @@ const Table = () => {
     "Actions",
   ];
 
-  const { data, deletePost } = usePosts();
+  const { data: fetchedData, deletePost } = usePosts();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
+
+  const effectiveData = data && data.length > 0 ? data : fetchedData ?? [];
+
   const startIdx = (currentPage - 1) * itemsPerPage;
-  const paginatedData = data?.slice(startIdx, startIdx + itemsPerPage) ?? [];
+  const paginatedData = effectiveData.slice(startIdx, startIdx + itemsPerPage);
+
   const [selectedDeleteId, setSelectedDeleteId] = useState<string | null>(null);
   const [selectedPost, setSelectedPost] = useState<TableElementProps | null>(
     null
   );
   const [mode, setMode] = useState<"create" | "edit" | "none">("none");
+
   return (
     <>
       <table className="Table">
@@ -40,25 +49,34 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {paginatedData?.map((item, idx) => (
-            <TableElement
-              key={idx}
-              {...item}
-              onDelete={(id) => {
-                setSelectedDeleteId(id);
-                setMode("none");
-              }}
-              onEdit={(post) => {
-                setSelectedPost(post);
-                setMode("edit");
-              }}
-            />
-          ))}
+          {paginatedData.length > 0 ? (
+            paginatedData.map((item, idx) => (
+              <TableElement
+                key={idx}
+                {...item}
+                onDelete={(id) => {
+                  setSelectedDeleteId(id);
+                  setMode("none");
+                }}
+                onEdit={(post) => {
+                  setSelectedPost(post);
+                  setMode("edit");
+                }}
+              />
+            ))
+          ) : (
+            <tr>
+              <td colSpan={headers.length} className="NoData">
+                No posts found
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
-      <If state={(data?.length ?? 0) > 6}>
+
+      <If state={effectiveData.length > itemsPerPage}>
         <Pagination
-          totalItems={data?.length ?? 0}
+          totalItems={effectiveData.length}
           itemsPerPage={itemsPerPage}
           currentPage={currentPage}
           onPageChange={setCurrentPage}

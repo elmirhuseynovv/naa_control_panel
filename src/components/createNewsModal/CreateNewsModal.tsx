@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import clsx from "clsx";
+import If from "@/components/If";
+
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { usePosts } from "@/hooks/UsePosts";
 import type { TableElementProps } from "@/types/types";
+import { usePosts } from "@/hooks/UsePosts";
+
 import IconClose from "@/assets/close.svg";
 import IconGallery from "@/assets/gallery.svg";
 import IconNews from "@/assets/news.svg";
 import IconAnnoucement from "@/assets/announcement.svg";
 import "./CreateNewsModal.scss";
-import clsx from "clsx";
-import If from "../If";
 
 const postSchema = z.object({
   title: z.string().min(5, "Title must be at least 5 characters long"),
@@ -34,7 +36,6 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
   mode = "create",
   post = null,
 }) => {
-  const { addPost, updatePost } = usePosts();
   const [step, setStep] = useState<1 | 2>(1);
   const [cover, setCover] = useState<string | null>(post?.image ?? null);
   const [category, setCategory] = useState<"News" | "Announcement">(
@@ -43,6 +44,7 @@ const CreateNewsModal: React.FC<CreateNewsModalProps> = ({
   const [extraImages, setExtraImages] = useState<string[]>([]);
   const [language, setLanguage] = useState<"AZ" | "EN">("AZ");
   const [imageError, setImageError] = useState<string>("");
+  const { addPost, updatePost } = usePosts();
 
   const {
     register,
