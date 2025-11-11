@@ -5,7 +5,12 @@ import IconEdit from "@/assets/edit.svg";
 import IconTrash from "@/assets/trash.svg";
 import "./TableElement.scss";
 
-const TableElement: React.FC<TableElementProps> = ({
+interface TableElementWithActions extends TableElementProps {
+  onDelete: (id: string) => void;
+  onEdit: (post: TableElementProps) => void;
+}
+
+const TableElement: React.FC<TableElementWithActions> = ({
   id,
   image,
   title,
@@ -16,22 +21,30 @@ const TableElement: React.FC<TableElementProps> = ({
   status,
   author,
   onDelete,
-  onUpdate,
+  onEdit,
 }) => {
-  const getContentTypeStyle = () => {
-    return contentType === "News"
+  const getContentTypeStyle = () =>
+    contentType === "News"
       ? { color: "#1447E6", backgroundColor: "#C4DEFF" }
       : { color: "#8200DB", backgroundColor: "#F3E8FF" };
-  };
 
-  const getStatusStyle = () => {
-    return status === "Active"
+  const getStatusStyle = () =>
+    status === "Active"
       ? { color: "#145E00", backgroundColor: "#E7FFE1" }
       : { color: "#A40000", backgroundColor: "#FFEAEA" };
-  };
 
-  const getStatusDotColor = () => {
-    return status === "Active" ? "#145E00" : "#A40000";
+  const getStatusDotColor = () => (status === "Active" ? "#145E00" : "#A40000");
+
+  const postData: TableElementProps = {
+    id,
+    image,
+    title,
+    description,
+    contentType,
+    date,
+    time,
+    status,
+    author,
   };
 
   return (
@@ -97,18 +110,19 @@ const TableElement: React.FC<TableElementProps> = ({
           <button
             type="button"
             className="ActionButton"
-            onClick={() => onUpdate && onUpdate(id)}
+            onClick={() => onEdit(postData)}
             aria-label="Edit"
           >
-            <img src={IconEdit} alt="" className="ActionIcon" />
+            <img src={IconEdit} alt="Edit" className="ActionIcon" />
           </button>
+
           <button
             type="button"
             className="ActionButton"
-            onClick={() => onDelete && onDelete(id)}
+            onClick={() => onDelete(id)}
             aria-label="Delete"
           >
-            <img src={IconTrash} alt="" className="ActionIcon" />
+            <img src={IconTrash} alt="Delete" className="ActionIcon" />
           </button>
         </div>
       </td>

@@ -14,7 +14,7 @@ export const usePosts = () => {
   });
 
   const deletePost = useMutation({
-    mutationFn: async (id: number) => {
+    mutationFn: async (id: string) => {
       const res = await fetch(`http://localhost:3000/posts/${id}`, {
         method: "DELETE",
       });
@@ -26,5 +26,35 @@ export const usePosts = () => {
     },
   });
 
-  return { ...postsQuery, deletePost };
+  const addPost = useMutation({
+    mutationFn: async (newPost: TableElementProps) => {
+      const res = await fetch("http://localhost:3000/posts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newPost),
+      });
+      if (!res.ok) throw new Error("Failed to add post");
+      return res.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["posts"] });
+    },
+  });
+
+  const updatePost = useMutation({
+    mutationFn: async (updatedPost: TableElementProps) => {
+      const res = await fetch(`http://localhost:3000/posts/${updatedPost.id}`, {
+        method: "PUT", 
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedPost),
+      });
+      if (!res.ok) throw new Error("Failed to update post");
+      return res.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["posts"] });
+    },
+  });
+
+  return { ...postsQuery, deletePost, addPost, updatePost };
 };

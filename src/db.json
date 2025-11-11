@@ -1,180 +1,70 @@
 {
   "posts": [
     {
-      "id": "4",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Aviasiya sərgisi keçiriləcək",
-      "description": "Gələn ay Bakıda beynəlxalq aviasiya sərgisi keçiriləcək.",
+      "title": "AZAL Offers 40+ Destinations to Choose From",
+      "description": "As the Novruz holiday approaches, Azerbaijan's national air carrier, AZAL, is pleased to offer passengers flights to numerous destinations, providing a wide range of options.\n\n",
+      "author": "ehuseynov",
       "contentType": "News",
-      "date": "12/11/2026",
-      "time": "11:00 AM",
-      "status": "Scheduled",
-      "author": "snovruzlu"
-    },
-    {
-      "id": "5",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni laboratoriya istifadəyə verildi",
-      "description": "Mühəndislik fakültəsində yeni texnoloji laboratoriya açıldı.",
-      "contentType": "News",
-      "date": "13/11/2026",
-      "time": "08:45 AM",
-      "status": "Active",
-      "author": "ehuseynov"
-    },
-    {
-      "id": "6",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Tələbə startapı mükafat qazandı",
-      "description": "Akademiya tələbələrinin qurduğu startap beynəlxalq müsabiqədə qalib gəldi.",
-      "contentType": "News",
-      "date": "15/11/2026",
-      "time": "05:30 PM",
-      "status": "Active",
-      "author": "snovruzlu"
-    },
-    {
-      "id": "8",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Tələbələr üçün təqaüd proqramı elan edildi",
-      "description": "Yeni təqaüd proqramı akademiyanın ən aktiv tələbələrinə şamil olunacaq.",
-      "contentType": "Announcement",
-      "date": "18/11/2026",
-      "time": "04:30 PM",
-      "status": "Active",
-      "author": "snovruzlu"
-    },
-    {
       "id": "9",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni dron layihəsi təqdim olundu",
-      "description": "Akademiyanın tədqiqat qrupu yeni pilotsuz uçuş aparatını təqdim etdi.",
-      "contentType": "News",
+      "image": "https://www.azal.az/_next/static/media/AZAL_Novruz_12cf8f2228.jpg",
       "date": "20/11/2026",
       "time": "09:45 AM",
-      "status": "Active",
-      "author": "ehuseynov"
+      "status": "Active"
     },
     {
-      "id": "10",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni elmi jurnal nəşr olundu",
-      "description": "Akademiyanın elmi heyəti tərəfindən hazırlanan jurnal beynəlxalq bazada yayımlandı.",
+      "title": "AZAL Successfully Completes First Quarter of 2025 with Strong Operational Performance",
+      "description": "In the first quarter of this year, 3,718 flights were operated across 48 destinations, achieving an 89% on-time performance rate. Compared to the first quarter of 2024, the punctuality rate improved by 1%, while the number of flights increased by 4%. It should be noted that in March 2025, the punctuality rate reached 93%. ",
+      "author": "snovruzlu",
       "contentType": "News",
+      "id": "10",
+      "image": "https://cdn.yenisabah.az/resize.php?w=750&h=422&file=image_750x422_67ee3ad35b789.jpg",
       "date": "21/11/2026",
       "time": "01:20 PM",
-      "status": "Active",
-      "author": "snovruzlu"
+      "status": "Active"
     },
     {
-      "id": "11",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni təlim kursu başladı",
-      "description": "Kurs süni intellekt və maşın öyrənməsi üzrə bilikləri artırmağa yönəlib.",
+      "title": "National Aviation Academy",
+      "description": "Azərbaycan Respublikası mülki aviasiya sahəsində milli kadrlara olan ehtiyacın ödənilməsi məqsədilə Azərbaycan Respublikası Nazirlər Kabinetinin 15 iyun 1992-ci il tarixli 337 saylı qərarı ilə \"Azərbaycan Hava Yolları\" Dövlət Konserni (indiki \"Azərbaycan Hava Yolları\" Qapalı Səhmdar Cəmiyyəti) nəzdində Milli Aviasiya Mərkəzi yaradıldı",
+      "author": "ehuseynov",
       "contentType": "Announcement",
+      "id": "11",
+      "image": "https://upload.wikimedia.org/wikipedia/az/thumb/e/ed/MAA.jpeg/600px-MAA.jpeg",
       "date": "22/11/2026",
       "time": "03:15 PM",
-      "status": "Scheduled",
-      "author": "ehuseynov"
+      "status": "Scheduled"
     },
     {
-      "id": "12",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Akademiyada dron yarışları keçiriləcək",
-      "description": "Yarışda tələbələr öz dizayn etdikləri dronlarla iştirak edəcəklər.",
-      "contentType": "Event",
-      "date": "23/11/2026",
-      "time": "10:30 AM",
-      "status": "Planned",
-      "author": "snovruzlu"
-    },
-    {
-      "id": "13",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni tədris ili üçün qeydiyyat başladı",
-      "description": "Akademiyada 2027-ci il üçün tələbə qəbul prosesi artıq aktivdir.",
+      "title": "Azerbaijan Airlines - AZAL | Flight Ticket Booking - Airline Tickets",
+      "description": "Azerbaijan Airlines - AZAL | Flight Ticket Booking - Airline Tickets\n",
+      "author": "ehuseynov",
       "contentType": "Announcement",
-      "date": "25/11/2026",
-      "time": "09:00 AM",
-      "status": "Active",
-      "author": "ehuseynov"
-    },
-    {
-      "id": "14",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Akademiya beynəlxalq konfransda təmsil olundu",
-      "description": "Akademiyanın nümayəndələri beynəlxalq elmi konfransda çıxış ediblər.",
-      "contentType": "News",
-      "date": "26/11/2026",
-      "time": "11:50 AM",
-      "status": "Active",
-      "author": "snovruzlu"
-    },
-    {
       "id": "15",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Tələbələr üçün seminar təşkil olundu",
-      "description": "Seminar elm və texnologiyanın gələcəyi mövzusunda keçirildi.",
-      "contentType": "Event",
-      "date": "28/11/2026",
-      "time": "02:00 PM",
-      "status": "Completed",
-      "author": "ehuseynov"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-zDGIu1rT-jyrcUzc2kkgejMpJmlwE9mYA&s",
+      "date": "22/11/2026",
+      "time": "03:15 PM",
+      "status": "Scheduled"
     },
     {
-      "id": "16",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Tələbələr üçün yeni kitabxana bölməsi açıldı",
-      "description": "Yeni bölmə yalnız texnoloji mövzulara həsr olunub.",
-      "contentType": "News",
-      "date": "30/11/2026",
-      "time": "10:10 AM",
-      "status": "Active",
-      "author": "snovruzlu"
-    },
-    {
-      "id": "17",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Akademiyada kodlaşdırma marafonu keçiriləcək",
-      "description": "Marafonda 100-dən çox tələbə iştirak edəcək.",
-      "contentType": "Event",
-      "date": "01/12/2026",
-      "time": "08:00 AM",
-      "status": "Planned",
-      "author": "ehuseynov"
-    },
-    {
-      "id": "18",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni müəllim heyəti ilə tanışlıq",
-      "description": "Yeni dərs ili üçün akademiyanın müəllim heyəti təqdim olundu.",
+      "title": "Azal & Maldivian",
+      "description": "Azerbaijan Airlines - AZAL | Flight Ticket Booking - Airline Tickets\n",
+      "author": "ehuseynov",
       "contentType": "Announcement",
-      "date": "02/12/2026",
-      "time": "01:40 PM",
-      "status": "Active",
-      "author": "snovruzlu"
+      "id": "2332",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAE9R-kZ05XptchdagtpVMUpkDGhUobzfavg&s",
+      "date": "22/11/2026",
+      "time": "03:15 PM",
+      "status": "Scheduled"
     },
     {
-      "id": "19",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni startap mərkəzi istifadəyə verildi",
-      "description": "Mərkəz innovativ layihələr üçün tələbələrə imkanlar yaradacaq.",
-      "contentType": "News",
-      "date": "04/12/2026",
-      "time": "10:25 AM",
-      "status": "Active",
-      "author": "ehuseynov"
-    },
-    {
-      "id": "20",
-      "image": "https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg",
-      "title": "Yeni layihə: Pilotsuz uçuş məktəbi",
-      "description": "Akademiya tələbələri üçün dron idarəetmə kursları başlayır.",
+      "title": "AZAL Successfully Completes First Quarter of 2025 with Strong Operational Performance",
+      "description": "In the first quarter of this year, 3,718 flights were operated across 48",
+      "author": "ehuseynov",
       "contentType": "Announcement",
-      "date": "06/12/2026",
-      "time": "03:55 PM",
-      "status": "Scheduled",
-      "author": "ehuseynov"
+      "id": "45346345",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8TN2GJR4IbaAgJcEHVZaA7Rf7gehvRNobg&s",
+      "date": "22/11/2026",
+      "time": "03:15 PM",
+      "status": "Scheduled"
     }
   ]
 }

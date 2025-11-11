@@ -26,15 +26,16 @@ export interface IfProps {
 }
 
 export interface TableElementProps {
-  id: number;
+  id: string;
   image: string;
   title: string;
   description: string;
   contentType: string;
   date: string;
+  url?: string;
   time: string;
   status: string;
   author: string;
-  onDelete?: (id: number) => void;
-  onUpdate?: (id: number) => void;
+  onDelete?: (id: string) => void;
+  onUpdate?: (id: string) => void;
 }
